@@ -4,8 +4,19 @@
   <title>Document</title>
 </head>
 <body>
-  <img src="assets/images/cat.jpg" alt="cat">
-  <button id="click-me">Click Me!</button>
-  <h2></h2>
+  <div class="container">
+    <div id="choose-base">
+      <h4>Please enter the currency code (ex. 'USD' for US dollars) for the currency you wish to exchange:</h4>
+      <form id="base-currency-form">
+        <label for="base-currency">Enter currency code:</label>
+        <input type="text" id="base-currency">
+        <button type="submit" class="btn-submit" id="base-currency-btn">Submit</button>
+        <h5 id="base-show-errors"></h5>
+      </form>
+    </div>
+    <div id="choose-exchange">
+      <p>Stuff</p>
+    </div>
+  </div>
 </body>
 </html>
