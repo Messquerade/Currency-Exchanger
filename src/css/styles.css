@@ -1,5 +1,5 @@
 body {
-  background-color: rgb(161, 236, 226);
+  background-image: ;
 }
 
 img {
@@ -8,4 +8,8 @@ img {
 
 #result {
   display: none;
+}
+
+#show-errors {
+  color: red;
 }
