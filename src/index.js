@@ -9,8 +9,8 @@ import CurrencyExchange from "./exchange.service";
 function makeExchange(response, moneyAmount) {
   if (response.result === 'success') {
     let moneyResult = moneyAmount * parseFloat(response.conversion_rate);
-    $('#money-dollars').text(moneyAmount);
-    $('#money-exchanged').text(moneyResult);
+    $('#money-dollars').text(moneyAmount.toFixed(2));
+    $('#money-exchanged').text(moneyResult.toFixed(2));
     $('#result').show();
     $('#show-errors').text("");
   } else if (response === "404") {
@@ -32,8 +32,10 @@ $(document).ready(function () {
     event.preventDefault();
     let targetCurrency = $('#target-currency').val();
     let moneyAmount = parseFloat($('#money-amount').val());
-    makeApiCall(targetCurrency, moneyAmount);
+    if (isNaN(moneyAmount) || moneyAmount < 0) {
+      $('#show-errors').text("Please enter a positive number (ex. 10)");
+    } else {
+      makeApiCall(targetCurrency, moneyAmount);
+    }
   });
-
-
 });
