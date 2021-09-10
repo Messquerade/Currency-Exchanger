@@ -1,6 +1,6 @@
-# (Application Name)
+# Currency Exchanger
 
-#### (Brief Description of Application)
+#### This website will convert amounts in US dollars to numerous other currencies
 
 #### By Anna Clarke
 
@@ -16,9 +16,10 @@
 * _babel_
 * _popper_
 * _eslint_
-* 
+* _ExchangeRate-API_
 
 ## Description
+Users can use this website to quickly and easily convert money in US dollars to any supported currency. From Norwegian Krone to Tanzanian Shilling, currencies are selected via  ISO 4217 code. The user can look up which code they need in an updated table of supported currencies.
 
 ## Setup/Installation Requirements
 
@@ -28,15 +29,15 @@
 change the line "start": "npm run build & webpack-dev-server --open --mode development",
 to "start": "npm run build; webpack-dev-server --open --mode development",
 * Navigate to the top directory and type, `$ npm install`, into terminal
-* Go to (website) and generate a free API key
+* Go to [ExchangeRate-API](https://www.exchangerate-api.com/) and generate a free API key
 * Create a .env file and save your API key as API_KEY={your key here}
 * type, `$ npm run build`, to build your environment
 * type, `$ npm run start`, to open in your browser
 
 ## Known Bugs
 
-* _Any known issues_
-* _should go here_
+* _Only takes codes not names of countries_
+* _Only converts dollars as base currency_
 
 ## License
 
