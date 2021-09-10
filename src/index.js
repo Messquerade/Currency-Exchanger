@@ -10,13 +10,15 @@ function makeExchange(response, moneyAmount) {
   if (response.result === 'success') {
     let moneyResult = moneyAmount * parseFloat(response.conversion_rate);
     $('#money-dollars').text(moneyAmount);
-    console.log(moneyAmount);
     $('#money-exchanged').text(moneyResult);
     $('#result').show();
+    $('#show-errors').text("");
   } else if (response === "404") {
     $('#show-errors').text("The code you entered does not match any of our supported currencies");
+    $('#result').hide();
   } else {
     $('#show-errors').text(`There was an error processing your request: ${response}`);
+    $('#result').hide();
   }
 }
 
